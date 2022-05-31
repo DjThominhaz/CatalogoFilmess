@@ -1,0 +1,115 @@
+(1)/POST /Usuario/login
+
+request body
+{
+    email:""
+    senha: ""
+}
+
+response(200){
+    ID:0,
+    email:"",
+    nome:"",
+
+}
+
+(2)   /POST /filme
+
+request body{
+    "nome":"",
+    "sinopse":"",
+    "avaliacao":0.0
+    "Usuario":0
+    "lancamento": " 2010-10-10"
+    "disponivel": "true"
+    "imagem":"",
+}
+
+response(200){
+    "id":1
+    "nome":"",
+    "sinopse":"",
+    "avaliacao":0.0
+    "Usuario":0
+    "lancamento": " 2010-10-10"
+    "disponivel": "true"
+    "imagem":"",
+}
+
+(2.1)   /PUT /filme/:id/imagem
+
+request body{
+
+    "imagem":"",
+}
+
+response(200){
+    "id":1
+    "nome":"",
+    "sinopse":"",
+    "avaliacao":0.0
+    "Usuario":0
+    "lancamento": " 2010-10-10"
+    "disponivel": "true"
+    "imagem":"",
+}
+
+
+(3) /PUT   /FILME/:ID
+
+request body {
+    "nome":"",
+    "sinopse":"",
+    "avaliacao":0.0
+    "Usuario":0
+    "lancamento": " 2010-10-10"
+    "disponivel": "true"
+    "imagem":"",
+}
+ response(204){
+      --Sem conteudo
+ }
+
+
+(4) DELETE   /FILME/ID:
+
+response (204)
+
+(5) /GET    /FILME 
+
+response(204){
+    [
+       {  "nome":"",
+        "avaliacao":0.0
+        "Usuario":0
+        "lancamento": " 2010-10-10"
+       "disponivel": "true"
+        }
+    ]
+}
+
+
+(6) /GET   /filme/busca?nome=xxx
+    response(200)
+    [
+       {  "nome":"",
+        "avaliacao":0.0
+        "Usuario":0
+        "lancamento": " 2010-10-10"
+       "disponivel": "true"
+        }
+    ]
+}
+
+(7) GET   /FILME/:ID
+
+response(200)
+{
+    "nome":"",
+    "sinopse":"",
+    "avaliacao":0.0
+    "Usuario":0
+    "lancamento": " 2010-10-10"
+    "disponivel": "true"
+    "imagem":"",
+}
