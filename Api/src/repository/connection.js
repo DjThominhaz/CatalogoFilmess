@@ -4,7 +4,14 @@ const con = await mysql.createConnection({
     user: process.env.MYSQL_USER,
     host: process.env.MYSQL_HOST,
     password: process.env.MYSQL_PWD,
-    database: process.env.MYSQL_DB
+    database: process.env.MYSQL_DB,
+    typeCast: function(field, next){
+        if(field.type=== 'TINY' && field.length === 1){
+            return(field.string()==='1');
+        }else{
+            return next()
+        }
+    }
 })
 
 console.log("DB Conectado !")
